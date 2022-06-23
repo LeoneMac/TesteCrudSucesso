@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Página Inicial";
+}
+
+<div class="text-center">
+    <h2 class="display-4">Bem-vindo!</h2>
+    <p>Sistema de cadastro</p>
+</div>
+
+    <form action="" method="post" autocomplete="off">
+        <div class="mb-3">
+            <label class="form-label">Nome</label>
+            <input type="text" class="form-control" name="inputNome" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Data de nascimento</label>
+                <input type="text" cl name="inputNasc" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Telefone</label>
+            <input type="text" name="inputTel" required />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Pacote</label>
+                <select class="form-select" name="packs" required>
+                    <optgroup label="Planos de Sócio">
+                    <option selected>Sócio: R$199,99</option>
+                    <option value="extra">Sócio plus: R$399,99</option>
+                    </optgroup>
+                    <optgroup label="Planos de não associado">
+                    <option value="socio">Não-sócio: R$199,99</option>
+                    </optgroup>
+                </select>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Confirmo que as informações acima são verdadeiras</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
