@@ -8,5 +8,9 @@ namespace SucessoCRUD.Controllers
         {
             return View();
         }
+       public IActionResult Confirmar()
+        {
+            return View();
+        }
     }
 }
