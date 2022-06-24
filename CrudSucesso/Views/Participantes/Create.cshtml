@@ -1,0 +1,30 @@
+﻿@model Participante
+
+<h2>Cadastre-se</h2>
+<h6>Por favor, preencha todos os campos que não são opcionais.</h6>
+<form class="col-md-4" asp-action="Create">
+  <div class="mb-3">
+    <label class="form-label" asp-for="Name"></label>
+    <input class="form-control" asp-for="Name" required />
+  </div>
+  <div class="mb-3">
+    <label class="control-label" asp-for="BirthDate"></label>
+    <input class="form-control" asp-for="BirthDate" required />
+  </div>
+  <div class="mb-3">
+    <label class="control-label" asp-for="Phone"></label>
+    <input class="form-control" asp-for="Phone" required />
+  </div>
+  <div class="mb-3">
+    <label class="control-label" asp-for="PacoteId"></label>
+    <select class="form-control" asp-for="PacoteId" asp-items="ViewBag.pacotes"></select>
+  </div>
+  <div class="mb-3">
+    <label class="control-label" asp-for="Atividades">Atividades opcionais</label>
+    <br /> @foreach (Atividade atividade in ViewBag.atividades) { <input type="checkbox" />
+    <label>@atividade.DescAtv</label>
+    <br /> }
+  </div>
+  <input type="submit" value="Cadastrar" class="btn btn-primary" />
+  <a class="btn btn-primary" asp-controller="Home" asp-action="Index">Voltar</a>
+</form>
